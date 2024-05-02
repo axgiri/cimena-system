@@ -4,14 +4,14 @@ package cinema.axgiri;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class home extends javax.swing.JFrame {
+public class Home extends javax.swing.JFrame {
     Connection conn;
     ResultSet rs;
     PreparedStatement pst;
-    public home() {
+    public Home() {
         super ("home page and booking");
         initComponents();
-        conn = connecting.ConnectorDb();
+        conn = Connecting.ConnectorDb();
     }
 
     private void initComponents() {
@@ -104,13 +104,13 @@ public class home extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        available ob = new available();
+        Available ob = new Available();
         ob.setVisible(true);
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        login ob = new login();
+        Login ob = new Login();
         ob.setVisible(true);
     }
 
@@ -140,18 +140,18 @@ public class home extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new home().setVisible(true);
+                new Home().setVisible(true);
             }
         });
     }

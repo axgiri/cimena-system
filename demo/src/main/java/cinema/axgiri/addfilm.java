@@ -3,15 +3,15 @@ package cinema.axgiri;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class addfilm extends javax.swing.JFrame {
+public class AddFilm extends javax.swing.JFrame {
     Connection conn;
     ResultSet rs;
     PreparedStatement pst;
 
-    public addfilm() {
+    public AddFilm() {
         super ("add film");
         initComponents();
-        conn = connecting.ConnectorDb();
+        conn = Connecting.ConnectorDb();
     }
 
     private void initComponents() {
@@ -122,7 +122,7 @@ public class addfilm extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        dashboard ob = new dashboard();
+        Dashboard ob = new Dashboard();
         ob.setVisible(true);
     }
 
@@ -135,17 +135,17 @@ public class addfilm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(addfilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(addfilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(addfilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(addfilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddFilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new addfilm().setVisible(true);
+                new AddFilm().setVisible(true);
             }
         });
     }

@@ -3,15 +3,15 @@ package cinema.axgiri;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class removefilm extends javax.swing.JFrame {
+public class Removefilm extends javax.swing.JFrame {
     Connection conn;
     ResultSet rs;
     PreparedStatement pst;
 
-    public removefilm() {
+    public Removefilm() {
         super ("remove film");
         initComponents();
-        conn = connecting.ConnectorDb();
+        conn = Connecting.ConnectorDb();
     }
 
     private void initComponents() {
@@ -74,7 +74,7 @@ public class removefilm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        dashboard ob = new dashboard();
+        Dashboard ob = new Dashboard();
         ob.setVisible(true);
     }
 
@@ -105,18 +105,18 @@ public class removefilm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(removefilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Removefilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(removefilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Removefilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(removefilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Removefilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(removefilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Removefilm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new removefilm().setVisible(true);
+                new Removefilm().setVisible(true);
             }
         });
     }

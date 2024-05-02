@@ -1,9 +1,9 @@
 package cinema.axgiri;
 
 import javax.swing.JOptionPane;
-public class adminlogin extends javax.swing.JFrame {
+public class AdminLogin extends javax.swing.JFrame {
 
-    public adminlogin() {
+    public AdminLogin() {
         super("admin login");
         initComponents();
     }
@@ -80,7 +80,7 @@ public class adminlogin extends javax.swing.JFrame {
     String inputText2 = jTextField2.getText();
         if ("root".equals(inputText1 )&& "root".equals(inputText2)) {
             setVisible(false);
-            dashboard ob = new dashboard();
+            Dashboard ob = new Dashboard();
             ob.setVisible(true);
         }
         else 
@@ -89,7 +89,7 @@ public class adminlogin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        login ob = new login();
+        Login ob = new Login();
         ob.setVisible(true);
     }
 
@@ -102,17 +102,17 @@ public class adminlogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(adminlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(adminlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(adminlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(adminlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new adminlogin().setVisible(true);
+                new AdminLogin().setVisible(true);
             }
         });
     }

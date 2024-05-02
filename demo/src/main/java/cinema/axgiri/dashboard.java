@@ -4,15 +4,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class dashboard extends javax.swing.JFrame {
+public class Dashboard extends javax.swing.JFrame {
     Connection conn;
     ResultSet rs;
     PreparedStatement pst;
 
-    public dashboard() {
+    public Dashboard() {
         super("dashboard");
         initComponents();
-        conn = connecting.ConnectorDb();
+        conn = Connecting.ConnectorDb();
     }
 
     private void initComponents() {
@@ -106,37 +106,37 @@ public class dashboard extends javax.swing.JFrame {
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        addfilm ob = new addfilm();
+        AddFilm ob = new AddFilm();
         ob.setVisible(true);
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        login ob = new login();
+        Login ob = new Login();
         ob.setVisible(true);
     }
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        addadmin ob = new addadmin();
+        AddAdmin ob = new AddAdmin();
         ob.setVisible(true);
     }
 
     private void B5ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        addstaff ob = new addstaff();
+        AddStaff ob = new AddStaff();
         ob.setVisible(true);
     }
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        removefilm ob = new removefilm();
+        Removefilm ob = new Removefilm();
         ob.setVisible(true);
     }
 
     private void B6ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        removestaff ob = new removestaff();
+        RemoveStaff ob = new RemoveStaff();
         ob.setVisible(true);
     }
 
@@ -149,18 +149,18 @@ public class dashboard extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new dashboard().setVisible(true);
+                new Dashboard().setVisible(true);
             }
         });
     }

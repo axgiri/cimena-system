@@ -3,7 +3,7 @@ package cinema.axgiri;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class connecting {
+public class Connecting {
     Connection conn;
     
     public static Connection ConnectorDb(){

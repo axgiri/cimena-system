@@ -6,7 +6,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import java.util.Comparator;
 
-public class available extends javax.swing.JFrame {
+public class Available extends javax.swing.JFrame {
     Connection conn;
     ResultSet rs;
     PreparedStatement pst;
@@ -14,7 +14,7 @@ public class available extends javax.swing.JFrame {
     public void updateTable(){
         
         try{
-            conn = connecting.ConnectorDb();
+            conn = Connecting.ConnectorDb();
             String sql = "select * from films";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
@@ -50,7 +50,7 @@ public class available extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,e);
         }
     }
-    public available() {
+    public Available() {
         super ("available tickets");
         initComponents();
         updateTable();
@@ -109,7 +109,7 @@ public class available extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        home ob = new home();
+        Home ob = new Home();
         ob.setVisible(true);
     }
     public static void main(String args[]) {
@@ -121,17 +121,17 @@ public class available extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(available.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Available.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(available.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Available.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(available.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Available.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(available.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Available.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new available().setVisible(true);
+                new Available().setVisible(true);
             }
         });
     }
